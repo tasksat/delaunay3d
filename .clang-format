@@ -1,0 +1,13 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+UseTab: Never
+ColumnLimit: 0
+
+SortIncludes: CaseSensitive
+
+FixNamespaceComments: true
+ShortNamespaceLines: 0
+
+AlignAfterOpenBracket: BlockIndent
+
+PointerAlignment: Left
