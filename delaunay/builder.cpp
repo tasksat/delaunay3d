@@ -52,7 +52,10 @@ int in_sphere(const Vec3& p, const Vec3& p0, const Vec3& p1, const Vec3& p2, con
 }
 
 Face make_face(Index i0, Index i1, Index i2) {
-    return Face{{i0, i1, i2}};
+    std::array<Index, 3> f0{i0, i1, i2};
+    std::array<Index, 3> f1{i1, i2, i0};
+    std::array<Index, 3> f2{i2, i0, i1};
+    return Face{std::min({f0, f1, f2})};
 }
 
 std::array<std::array<Index, 4>, 4> tet_faces(std::span<const Index, 4> idx) {
