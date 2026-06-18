@@ -1,3 +1,10 @@
 .vscode/
 .DS_Store
+
+# cpp
 build/
+
+# web
+web/node_modules/
+web/dist/
+web/.vite/
